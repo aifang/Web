@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using EssentialTools.Models;
+using Ninject;
 
 namespace EssentialTools.Controllers
 {
