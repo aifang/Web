@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "myTable";
+}
+
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+        .div {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .table tr td {
+            align: center;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        function createTableDiv() {
+            var tdString = "<Table id='myTable2' border='1' bordercolor='#0099FF' cellspacing=0>";
+            for (var i = 1; i <= 9; i++) {
+                tdString += "<tr>";
+
+                for (var j = 1; j <= i; j++) {
+                    tdString += "<td>" + i + "x" + j + "=" + i * j + "</td>";
+                    if (i == j) {
+                        if (9 - j != 0)
+                            tdString += "<td colspan='" + (9 - j) + "'>&nbsp;</td>";
+                    }
+                }
+                tdString += "</tr>";
+            }
+            document.getElementById("myDiv").innerHTML = tdString + "</Table>";
+        }
+
+        function createTableFromAtoB() {
+            var numA = document.getElementById("txtNumS").value;//起始数值
+            var numB = document.getElementById("txtNumT").value;//结束数值
+            var numMax = 9; //最大数值
+            var tdString = "<Table id='myTable2' border='1' bordercolor='red' cellspacing=0>";
+            for (var i = numA; i <= numMax; i++) {
+                tdString += "<tr>";
+                for (var j = numA; j <= numB; j++) {
+                    tdString += "<td>" + i + "x" + j + "=" + i * j + "</td>";
+                    if (i == j) {
+                        if (numB - j != 0)
+                        {
+                            tdString += "<td colspan='" + (numB - j) + "'>&nbsp;</td>";
+                            break;
+                        }
+                            
+                    }
+                }
+                tdString += "</tr>";
+            }
+            document.getElementById("myDiv2").innerHTML = tdString + "</Table>";
+        }
+
+    </script>
+</head>
+<body onload="createTableDiv()">
+    <h3><b>登鹳雀楼</b></h3>
+    <div>王之涣</div>
+    <div>白日依山尽，</div>
+    <div>黄河入海流。</div>
+    <div>欲穷千里目，</div>
+    <div>更上一层楼。</div>
+
+    <center>
+        <div style="display:inline"><font size="3" color="gree">欲穷千里目，</font></div>
+        <div style="display:inline"><font size="3" color="blue">更上一层楼。</font></div>
+    </center>
+
+    <table border="1" align="center"  bordercolor="#0099FF" cellspacing=0>
+        <th colspan="2">登鹳雀楼</th>
+        <tr><td align="center" colspan="2">王之涣</td></tr>
+        <tr><td align="center"><font size="3" color="red">白日依山尽，</font></td> <td align="center" ;><font size="3" color="yellow">黄河入海流。</font></td></tr>
+    </table>
+
+    <div style=" float:left ; border:1px solid red; width:50%; text-align: right"><font size="3" color="gree">欲穷千里目，</font></div>
+    <div style="  border:1px solid red;width:50%;  text-align: left"><font size="3" color="blue">更上一层楼。</font></div>
+
+    <table border="1" bordercolor="#0099FF" cellspacing=0>
+        <tr><td>1x1=1</td><td colspan="9"></td></tr>
+        <tr><td>2x1=2 </td><td>2x2=4</td><td colspan="7"></td></tr>
+        <tr><td>3x1=3</td><td>3x2=6</td><td>3x3=9</td></tr>
+        <tr><td>4x1=4</td><td>4x2=8</td><td>3</td><td>4x4=16</td></tr>
+        <tr><td>5x1=5</td><td>5x2=10</td><td>3</td><td>4</td><td>5x5=25</td></tr>
+        <tr><td>6x1=6</td><td>6x2=12</td><td>3</td><td>4</td><td>5</td><td>6x6=36</td></tr>
+        <tr><td>7x1=7</td><td>7x2=14</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7x7=49</td></tr>
+        <tr><td>8x1=8</td><td>8x2=16</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8x8=64</td></tr>
+        <tr><td>9x1=9</td><td>9x2=18</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9x9=81</td></tr>
+    </table>
+
+    <input id="txtNumS" type="text" value="1" style="border:1px solid #000;" />
+    到
+    <input id="txtNumT" type="text" value="9" style="border:1px solid #000;" />
+    <button id="btnCreateTable" onclick="createTableFromAtoB()">生成表</button>
+    <div id="myDiv"></div>
+    <div id="myDiv2"></div>
+</body>
+</html>

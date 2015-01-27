@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>图形服务工具</title>
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/arcgis_js_api/library/3.12/3.12compact/dijit/themes/tundra/tundra.css">
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1/arcgis_js_api/library/3.12/3.12compact/esri/css/esri.css" />
+    <script type="text/javascript" src="http://127.0.0.1/arcgis_js_api/library/3.12/3.12compact/init.js"></script>
+    <script src="~/Scripts/jsapi_vsdoc12_v38.js"></script>
+    <script type="text/javascript">    
+        dojo.require("esri.map");
+
+        function loadMapService() {            
+            var myMap = new esri.Map("mapDiv");
+            var myTiledMapServiceLayer = new esri.layers.ArcGISTiledMapServiceLayer("http://key-pc/ArcGIS/rest/services/byqq_20140930/MapServer");
+            myMap.addLayer(myTiledMapServiceLayer);
+            
+        }
+        
+    </script>
+</head>
+<body>
+    <input id="txtServerURL" type="text" style="width:100px;height:40px;border:1px solid #000;" />
+    <br />
+    <button id="btnAddServer" style="width:100px;height:40px;border:1px solid #000;" onclick="loadMapService()" >加载</button>
+    <br/>
+    <div id="mapDiv" style="width:900px;height:600px;border:1px solid #000;"></div>
+</body>
+</html>
