@@ -41,3 +41,5 @@ F:\Myprogram\GitHub\Web\图形服务工具\EssentialTools\bin\zh-Hans\System.Web
 F:\Myprogram\GitHub\Web\图形服务工具\EssentialTools\obj\Debug\EssentialTools.csprojResolveAssemblyReference.cache
 F:\Myprogram\GitHub\Web\图形服务工具\EssentialTools\obj\Debug\EssentialTools.dll
 F:\Myprogram\GitHub\Web\图形服务工具\EssentialTools\obj\Debug\EssentialTools.pdb
+F:\Myprogram\GitHub\Web\图形服务工具\EssentialTools\bin\Ninject.dll
+F:\Myprogram\GitHub\Web\图形服务工具\EssentialTools\bin\Ninject.xml

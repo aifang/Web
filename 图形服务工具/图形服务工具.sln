@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mapServerTools", "mapServer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EssentialTools", "EssentialTools\EssentialTools.csproj", "{7F685535-36F4-4B22-8FC1-9ACD99F83B16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EssentialTools.Tests", "EssentialTools.Tests\EssentialTools.Tests.csproj", "{0514AC1C-60BD-41AC-8D9E-5F90A19922E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7F685535-36F4-4B22-8FC1-9ACD99F83B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F685535-36F4-4B22-8FC1-9ACD99F83B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F685535-36F4-4B22-8FC1-9ACD99F83B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0514AC1C-60BD-41AC-8D9E-5F90A19922E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0514AC1C-60BD-41AC-8D9E-5F90A19922E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0514AC1C-60BD-41AC-8D9E-5F90A19922E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0514AC1C-60BD-41AC-8D9E-5F90A19922E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
